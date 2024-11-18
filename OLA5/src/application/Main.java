@@ -32,9 +32,9 @@ public class Main extends Application {
 			
 			// Startup cards
 			HBox showing_cards = new HBox(new ImageView(new Image("file:assets/13.png")),
-					new ImageView(new Image("file:assets/13.png")),
-					new ImageView(new Image("file:assets/13.png")),
-					new ImageView(new Image("file:assets/13.png")));
+						new ImageView(new Image("file:assets/13.png")),
+						new ImageView(new Image("file:assets/13.png")),
+						new ImageView(new Image("file:assets/13.png")));
 			showing_cards.setAlignment(Pos.CENTER);
 			showing_cards.setSpacing(10);
 			
@@ -72,6 +72,7 @@ public class Main extends Application {
 			spin.setOnAction(e -> {
 				String user_input = inserted.getText();
 				double spent_on_this_spin =  0;
+				// Tries to parse the user's input but does nothing if it is un-parsable
 				try {
 					spent_on_this_spin =  Double.parseDouble(user_input);
 				} catch(Exception e1) {
@@ -95,9 +96,6 @@ public class Main extends Application {
 					instructions.setText("Jackpot! Quadruple WIN x 4!!");
 				}
 			});
-			
-			
-			
 			
 			// Add all to root
 			root.getChildren().addAll(showing_cards, 
