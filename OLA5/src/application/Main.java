@@ -31,10 +31,10 @@ public class Main extends Application {
 			total_money_won = 0;
 			
 			// Startup cards
-			HBox showing_cards = new HBox(new ImageView(new Image("file:assets/13.png")),
-						new ImageView(new Image("file:assets/13.png")),
-						new ImageView(new Image("file:assets/13.png")),
-						new ImageView(new Image("file:assets/13.png")));
+			HBox showing_cards = new HBox(); 
+			for(int i = 0; i < NUM_CARDS; i++) {
+				showing_cards.getChildren().add(new ImageView(new Image("file:assets/13.png")));
+			}
 			showing_cards.setAlignment(Pos.CENTER);
 			showing_cards.setSpacing(10);
 			
